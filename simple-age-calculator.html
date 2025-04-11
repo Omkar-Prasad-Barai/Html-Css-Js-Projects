@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Age Calculator</title>
+  <style>
+    body { text-align: center; padding: 40px; }
+    input { padding: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Age Calculator</h2>
+  <input type="number" id="birth" placeholder="Enter Birth Year">
+  <button onclick="getAge()">Calculate Age</button>
+  <p id="output"></p>
+
+  <script>
+    function getAge() {
+      const birth = document.getElementById("birth").value;
+      const age = new Date().getFullYear() - birth;
+      document.getElementById("output").innerText = "Your age is: " + age;
+    }
+  </script>
+</body>
+</html>
