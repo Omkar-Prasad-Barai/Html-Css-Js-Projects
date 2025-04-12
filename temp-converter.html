@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Converter</title>
+  <style>
+    input { margin: 5px; padding: 10px; width: 200px; }
+  </style>
+</head>
+<body>
+  <h2>Temperature Converter</h2>
+  <input type="number" id="celsius" placeholder="Celsius" oninput="toFahrenheit()">
+  <input type="number" id="fahrenheit" placeholder="Fahrenheit" oninput="toCelsius()">
+
+  <script>
+    function toFahrenheit() {
+      const c = document.getElementById("celsius").value;
+      document.getElementById("fahrenheit").value = (c * 9/5) + 32;
+    }
+    function toCelsius() {
+      const f = document.getElementById("fahrenheit").value;
+      document.getElementById("celsius").value = (f - 32) * 5/9;
+    }
+  </script>
+</body>
+</html>
