@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Counter</title>
+  <style>
+    textarea { width: 300px; height: 150px; }
+    p { font-size: 18px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Word Counter Tool</h2>
+  <textarea id="input" oninput="countWords()"></textarea>
+  <p>Total Words: <span id="wordCount">0</span></p>
+
+  <script>
+    function countWords() {
+      const text = document.getElementById("input").value.trim();
+      const words = text.split(/\s+/).filter(word => word !== "");
+      document.getElementById("wordCount").innerText = words.length;
+    }
+  </script>
+</body>
+</html>
