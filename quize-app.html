@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .question { font-size: 20px; }
+    button { display: block; margin: 10px 0; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Quiz Time!</h2>
+  <div class="question">What is the capital of India?</div>
+  <button onclick="checkAnswer('Delhi')">Delhi</button>
+  <button onclick="checkAnswer('Mumbai')">Mumbai</button>
+  <button onclick="checkAnswer('Kolkata')">Kolkata</button>
+  <button onclick="checkAnswer('Chennai')">Chennai</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer(ans) {
+      const result = document.getElementById("result");
+      if (ans === "Delhi") {
+        result.innerText = "Correct!";
+      } else {
+        result.innerText = "Wrong Answer.";
+      }
+    }
+  </script>
+</body>
+</html>
