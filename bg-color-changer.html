@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Color Changer</title>
+  <style>
+    body { text-align: center; padding: 40px; transition: background 0.5s; }
+    button { padding: 10px 20px; }
+  </style>
+</head>
+<body>
+  <h2>Click to Change Background Color</h2>
+  <button onclick="changeColor()">Change</button>
+
+  <script>
+    function changeColor() {
+      const colors = ["lightblue", "lightgreen", "lavender", "salmon", "#FFD700"];
+      const random = Math.floor(Math.random() * colors.length);
+      document.body.style.backgroundColor = colors[random];
+    }
+  </script>
+</body>
+</html>
