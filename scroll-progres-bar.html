@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Progress Bar</title>
+  <style>
+    body { height: 2000px; margin: 0; }
+    #progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 8px;
+      background: #4caf50;
+      width: 0%;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress"></div>
+
+  <script>
+    window.onscroll = function () {
+      let scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let percent = (scrolled / height) * 100;
+      document.getElementById("progress").style.width = percent + "%";
+    };
+  </script>
+</body>
+</html>
